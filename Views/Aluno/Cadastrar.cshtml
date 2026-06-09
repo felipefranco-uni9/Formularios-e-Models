@@ -1,0 +1,42 @@
+@model Formulario.Models.Aluno
+
+@{
+    ViewData["Title"] = "Cadastro de Aluno";
+}
+
+<h2>Formulário de Cadastro de Aluno</h2>
+
+<form asp-controller="Aluno" asp-action="Cadastrar" method="post">
+    
+    <div style="margin-bottom: 15px;">
+        <label asp-for="Nome"></label><br />
+        <input asp-for="Nome" />
+        <span asp-validation-for="Nome" style="color: red;"></span>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email" style="color: red;"></span>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label asp-for="RA"></label><br />
+        <input asp-for="RA" />
+        <span asp-validation-for="RA" style="color: red;"></span>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label asp-for="Curso"></label><br />
+        <input asp-for="Curso" />
+        <span asp-validation-for="Curso" style="color: red;"></span>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label asp-for="DataNascimento">Data de Nascimento</label><br />
+        <input asp-for="DataNascimento" type="date" />
+        <span asp-validation-for="DataNascimento" style="color: red;"></span>
+    </div>
+
+    <button type="submit">Enviar</button>
+</form>
