@@ -1,0 +1,27 @@
+@model Formulario.Models.Aluno
+
+@{
+    ViewData["Title"] = "Confirmação de Cadastro";
+}
+
+<div style="background-color: #d4edda; color: #155724; padding: 15px; border-radius: 5px; border: 1px solid #c3e6cb;">
+    <h2>Cadastro realizado com sucesso!</h2>
+</div>
+
+<div style="margin-top: 20px;">
+    <h3>Dados do Aluno Cadastrado:</h3>
+    
+    <ul>
+        <li><strong>Nome:</strong> @Model.Nome</li>
+        <li><strong>Email:</strong> @Model.Email</li>
+        <li><strong>RA:</strong> @Model.RA</li>
+        <li><strong>Curso:</strong> @Model.Curso</li>
+        <li><strong>Data de Nascimento:</strong> @Model.DataNascimento.ToShortDateString()</li>
+    </ul>
+</div>
+
+<div style="margin-top: 20px;">
+    <a asp-controller="Aluno" asp-action="Cadastrar" style="padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
+        Cadastrar outro
+    </a>
+</div>
